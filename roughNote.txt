@@ -1,0 +1,20 @@
+state(stated, stateName)
+ticket(ticketNumber, dateCreated, description, dateResolved, stateID, ticketTypeID, parentTicketNumber, employeeNumber)
+ticketType(ticketTypeID, typeName, maxResolution)
+Employe(employeeNumber, employeeName, employeeContact, departmentID)
+department(departmentID, departmentName)
+TicketWasInState(ticketNumber,stateID, changeTimeStamp)
+
+
+
+
+
+
+
+
+
+
+
+NOTE: if the relationship is one-to-many, the one table inherits the primary key of the many table as a foreign key.
+	If the relationship is many-to-one, the one table inherits the primary key of the many table as a foreign key.
+	If the relationship is many-to-may, a new relationship table is created (and the composite key becomes the primary key)
