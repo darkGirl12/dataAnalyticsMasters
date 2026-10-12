@@ -1,0 +1,35 @@
+the facts are usually numbers
+
+STEP 1: 
+	- Duplicate facts table
+	- Remove for the dimension
+	- Choose TF columns
+	- Remove duplicates
+	- Add an index
+	- Rename index
+	- Merge dimension with facts table
+
+
+- Right click on sheets and disable load because it shouldn't be loaded into the power BI
+- Connect the brand table to the facts on the BI by dragging brandID in DIM brands into brandID in Facts
+- Go to the tables icon, create new table, enter DIM Date = CALENDARAUTO()
+- Create new column for year, months, and quarter respectively, and enter the function Year = [Date].[Year], Month = [Date].[MonthNo], Quarter = [Date].[QuarterNo]
+
+- Go to enter data and create a new table and name it Measures table.
+
+NB: A new table Dimension Date is created, connect it to the facts table by dragging date is DIM Date to date in Facts.
+
+- Define the KPIS
+	-Sales
+		- Total sales
+		- Total Discounts
+		- Net Sales = Total Sales - Total Discounts
+		- Discount = Net Sales / Total Sales
+	- Cost
+		- Total Costs = Cost + Delivery Cost + Labor Cost
+		- Total Delivery Cost
+		- Total Labor Cost
+	- Margin
+		- Margin = Net Sales - Total Cost
+		- Margin / = Margin / Net Sales
+- Create Dashboards
